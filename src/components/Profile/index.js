@@ -1,37 +1,74 @@
-import React from 'react'
-import {
-    StaticQuery,
-    graphql
-} from "gatsby"
-
-const Profile = () => (
-    <StaticQuery
-        query=
-        {graphql`query MySiteMetadata {
-                site{
-                    siteMetadata {
-                        title
-                        description
-                        author
-                        position
-                    }
-                }
-            }`
-        }
-        render={({ site: { siteMetadata: { title, author, description, position } } }) => (
-            <div className="Profile-wrapper" >
-                <h1>{author}</h1>
-                <h2>{title}</h2>
-                <h2> Um cara que faz programas de compiuter </h2>
-                <h2> {position} </h2>
-                <p> {description} </p>
-            </div>
-        )}
-    />
-)
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+// import { StaticQuery, graphql } from "gatsby"
 
 /**
- * this way we're use static query to fetch data from graphql and render 'dinamically' without using desctructin assignment
+ * This is another way that we're using useStaticQuery instead of StaticQuery, useStaticQuery is a react compenent and using it we are able to separate the data 'request' from the rendering part
+ */
+const Profile = () => {
+  const {
+    site: {
+      siteMetadata: { title, position, description },
+    },
+  } = useStaticQuery(graphql`
+    query MySiteMetadata {
+      site {
+        siteMetadata {
+          title
+          description
+          author
+          position
+        }
+      }
+    }
+  `)
+
+  return (
+    <div className="Profile-wrapper">
+      <h1>Davi Alves</h1>
+      <h2>{title}</h2>
+      <h2> Um cara que faz programas de compiuter </h2>
+      <h2> {position} </h2>
+      <p> {description} </p>
+    </div>
+  )
+}
+
+/**
+ * here we're using the desctructuring assignment to render our profile componet
+ */
+// const Profile = () => (
+//   <StaticQuery
+// query={graphql`
+//   query MySiteMetadata {
+//     site {
+//       siteMetadata {
+//         title
+//         description
+//         author
+//         position
+//       }
+//     }
+//   }
+// `}
+//     render={({
+//       site: {
+//         siteMetadata: { title, author, description, position },
+//       },
+//     }) => (
+//   <div className="Profile-wrapper">
+//     <h1>{author}</h1>
+//     <h2>{title}</h2>
+//     <h2> Um cara que faz programas de compiuter </h2>
+//     <h2> {position} </h2>
+//     <p> {description} </p>
+//   </div>
+//     )}
+//   />
+// )
+
+/**
+ * this way we're use static query to fetch data from graphql and render 'dinamically' without using desctructuring assignment
  */
 // const Profile = () => (
 //     <StaticQuery
