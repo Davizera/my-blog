@@ -1,5 +1,6 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Avatar from '../Avatar'
 // import { StaticQuery, graphql } from "gatsby"
 
 /**
@@ -25,7 +26,7 @@ const Profile = () => {
 
   return (
     <div className="Profile-wrapper">
-      <h1>Davi Alves</h1>
+      <Avatar />
       <h2>{title}</h2>
       <h2> Um cara que faz programas de compiuter </h2>
       <h2> {position} </h2>

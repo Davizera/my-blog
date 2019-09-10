@@ -3,9 +3,10 @@ module.exports = {
     title: `Davizera's blog`,
     description: `That is my blog and im creating it to learn more about gatsby and put m plans in real life! Addicted to coffe <3`,
     author: `@Davizera`,
-    position: `Full stack developer of armengues 24/7 at narnia`
+    position: `Full stack developer of armengues 24/7 at narnia`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
