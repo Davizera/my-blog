@@ -1,13 +1,13 @@
 import { Github } from 'styled-icons/boxicons-logos/Github'
 import { Twitter } from 'styled-icons/boxicons-logos/Twitter'
 import { Instagram } from 'styled-icons/boxicons-logos/Instagram'
-import { Linkedin } from 'styled-icons/boxicons-logos/Linkedin'
+import { Linkedin as LinkedIn } from 'styled-icons/boxicons-logos/Linkedin'
 
 const Icons = {
   Github,
   Twitter,
   Instagram,
-  Linkedin,
+  LinkedIn,
 }
 
 export default Icons
