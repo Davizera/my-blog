@@ -8,7 +8,6 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <h1>Davizera's blog</h1>
-    <Link to="/About">About</Link>
   </Layout>
 )
 
