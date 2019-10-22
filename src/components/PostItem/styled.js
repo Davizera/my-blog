@@ -20,9 +20,9 @@ export const PostItemWrapper = styled.section`
 
 export const PostItemTag = styled.div`
   align-items: center;
-  background: ${props => props.background};
+  background: ${props => (props.background ? props.background : '#1fa1f2')};
   border-radius: 50%;
-  color: ${props => props.color};
+  color: ${props => (props.color ? props.color : 'white')};
   display: flex;
   font-size: 1.3rem;
   font-weight: 700;
