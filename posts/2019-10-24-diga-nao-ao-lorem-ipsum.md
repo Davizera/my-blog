@@ -15,6 +15,8 @@ a=3
 puts a
 ```
 
+![Este é um deserto qualquer](/assets/img/desert.jpg)
+
 ## Fusce a metus eu
 
 Pellentesque `sed` sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum.
