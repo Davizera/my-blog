@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Davizera's blog`,
+    title: `Davi Alves`,
     description: `That is my blog and im creating it to learn more about gatsby and put m plans in real life! Addicted to coffe <3`,
     author: `@Davizera`,
-    position: `Full stack developer of armengues 24/7 at narnia`,
+    position: `Full stack developer Jr. (Growthing)`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
