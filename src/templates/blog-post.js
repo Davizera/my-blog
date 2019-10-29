@@ -6,9 +6,10 @@ import * as S from '../components/Post/styled'
 
 import { graphql } from 'gatsby'
 
-const BlogPost = ({ data }) => {
-  const post = data.markdownRemark
-
+const BlogPost = props => {
+  const post = props.data.markdownRemark
+  const nextPost = props.pageContext.next
+  const prevPost = props.pageContext.previous
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />

@@ -22,6 +22,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
+//To get all post
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
@@ -62,6 +63,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
+    //To create post pages
     const posts = result.data.allMarkdownRemark.edges
 
     posts.forEach(({ node, next, previous }) => {
@@ -78,6 +80,7 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
+    //To create pagination
     const postsPerPage = 6
     const numPages = Math.ceil(posts.length / postsPerPage)
 
