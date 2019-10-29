@@ -1,15 +1,16 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
+import RecommendedPosts from '../components/RecommendedPosts'
 import SEO from '../components/seo'
-import * as S from '../components/Post/styled'
 
-import { graphql } from 'gatsby'
+import * as S from '../components/Post/styled'
+import { Previous } from 'styled-icons/icomoon'
 
 const BlogPost = props => {
   const post = props.data.markdownRemark
-  const nextPost = props.pageContext.next
-  const prevPost = props.pageContext.previous
+
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
@@ -23,6 +24,10 @@ const BlogPost = props => {
       <S.MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
       </S.MainContent>
+      <RecommendedPosts
+        next={props.pageContext.nextPost}
+        previous={props.pageContext.previousPost}
+      />
     </Layout>
   )
 }
