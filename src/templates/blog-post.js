@@ -3,13 +3,15 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import RecommendedPosts from '../components/RecommendedPosts'
+import Comments from '../components/Comments'
 import SEO from '../components/seo'
 
 import * as S from '../components/Post/styled'
-import { Previous } from 'styled-icons/icomoon'
 
-const BlogPost = props => {
-  const post = props.data.markdownRemark
+const BlogPost = ({ data, pageContext }) => {
+  const post = data.markdownRemark
+  const next = pageContext.nextPost
+  const previous = pageContext.previousPost
 
   return (
     <Layout>
@@ -24,10 +26,8 @@ const BlogPost = props => {
       <S.MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
       </S.MainContent>
-      <RecommendedPosts
-        next={props.pageContext.nextPost}
-        previous={props.pageContext.previousPost}
-      />
+      <RecommendedPosts next={next} previous={previous} />
+      <Comments url={post.fields.slug} title={post.frontmatter.title} />
     </Layout>
   )
 }
@@ -35,6 +35,9 @@ const BlogPost = props => {
 export const query = graphql`
   query Post($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
+      fields {
+        slug
+      }
       frontmatter {
         title
         description
