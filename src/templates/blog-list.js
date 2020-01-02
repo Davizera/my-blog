@@ -9,7 +9,7 @@ import { graphql } from 'gatsby'
 
 const BlogList = props => {
   const postList = props.data.allMarkdownRemark.edges
-  const {currentPage, numPages} = props.pageContext
+  const { currentPage, numPages } = props.pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
   const prevPage = currentPage - 1 === 1 ? `/` : `/page/${currentPage - 1}`
@@ -23,20 +23,12 @@ const BlogList = props => {
           node: {
             timeToRead,
             fields: { slug },
-            frontmatter: {
-              background,
-              category,
-              date,
-              description,
-              title,
-              color,
-            },
+            frontmatter: { background, category, date, description, title },
           },
         }) => (
           <PostItem
             slug={slug}
             background={background}
-            color={color}
             category={category}
             date={date}
             timeToRead={timeToRead}
@@ -45,7 +37,14 @@ const BlogList = props => {
           />
         )
       )}
-      <Pagination isFirst={isFirst} isLast={isLast} currentPage={currentPage} numPages={numPages} prevPage={prevPage} nextPage={nextPage}/>
+      <Pagination
+        isFirst={isFirst}
+        isLast={isLast}
+        currentPage={currentPage}
+        numPages={numPages}
+        prevPage={prevPage}
+        nextPage={nextPage}
+      />
     </Layout>
   )
 }
