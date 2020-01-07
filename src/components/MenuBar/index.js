@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import * as S from './styled'
 
 import { Home } from 'styled-icons/boxicons-solid/Home'
