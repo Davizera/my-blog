@@ -5,7 +5,7 @@ const queries = require('./src/utils/algolia_queries')
 module.exports = {
   siteMetadata: {
     title: `Davi Alves`,
-    description: `That is my blog and im creating it to learn more about gatsby and put m plans in real life! Addicted to coffe <3`,
+    description: `Dev cansado tirando forças de onde não tem para se tornar um fullstack, esse é o meu jeito ninja de ser!`,
     author: `@Davizera`,
     position: `Full stack developer Jr. (Growthing)`,
   },
