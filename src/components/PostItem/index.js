@@ -31,8 +31,8 @@ const PostItem = ({
 
 PostItem.propTypes = {
   slug: PropTypes.string.isRequired,
-  background: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
+  background: PropTypes.string,
+  color: PropTypes.string,
   category: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   timeToRead: PropTypes.string.isRequired,
