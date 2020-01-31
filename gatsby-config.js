@@ -7,7 +7,7 @@ module.exports = {
     title: `Davi Alves`,
     description: `Dev cansado tirando forças de onde não tem para se tornar um fullstack, esse é o meu jeito ninja de ser!`,
     author: `@Davizera`,
-    position: `Full stack developer Jr. (Growthing)`,
+    position: `Full stack developer Jr`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
