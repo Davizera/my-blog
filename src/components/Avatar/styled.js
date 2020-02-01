@@ -4,12 +4,11 @@ import media from 'styled-media-query'
 
 export const AvataWrapper = styled(Img)`
   border-radius: 50%;
+  height: 3.75rem;
   margin: auto;
-  height: 6.85rem;
-  width: 6.85rem;
-
+  width: 3.75rem;
   ${media.lessThan('large')`
-    width:1.875rem;
-    height:1.875rem;
+    height: 1.875rem;
+    width: 1.875rem;
   `}
 `
