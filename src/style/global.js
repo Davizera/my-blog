@@ -25,25 +25,31 @@ const GlobalStyles = createGlobalStyle`
     font: inherit;
     vertical-align: baseline;
   }
+ 
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
+ 
   body {
     line-height: 1;
   }
+ 
   ol, ul {
     list-style: none;
   }
+ 
   blockquote, q {
     quotes: none;
   }
+ 
   blockquote:before, blockquote:after,
   q:before, q:after {
     content: '';
     content: none;
   }
+ 
   table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -51,38 +57,40 @@ const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+ 
   body {
-    background: var(--background);
+    background: #16202c;
     line-height: 1;
     font-size: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
+ 
   img {
     display: block;
   	width: 100%;
   	height: auto;
   }
+  
+body.dark{
+  --borders: #38444d;
+  --texts: #8899a6;
+  --postColor: #fff;
+  --highlight: #1fa1f2;
+  --mediumBackground: #192734;
+  --background: #16202c;
+  --white: #fff;
+  --black: #222;
+}
 
-  body.dark{
-    --borders: #38444d;
-    --texts: #8899a6;
-    --postColor: #fff;
-    --highlight: #1fa1f2;
-    --mediumBackground: #192734;
-    --background: #16202c;
-    --white: #fff;
-    --black: #222;
-  }
-
-  body.light{
-    --borders: #dedede ;
-    --texts: #555555;
-    --postColor: #111;
-    --highlight: #1fa1f2;
-    --mediumBackground: #f7f7f7;
-    --background: #FDFDFD;
-    --white: #fff;
-    --black: #222;
-  }
+body.light{
+  --borders: #dedede ;
+  --texts: #555555;
+  --postColor: #111;
+  --highlight: #1fa1f2;
+  --mediumBackground: #f7f7f7;
+  --background: #FDFDFD;
+  --white: #fff;
+  --black: #222;
+}
 `
 export default GlobalStyles
