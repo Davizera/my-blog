@@ -45,7 +45,7 @@ const BlogList = props => {
               color={color}
               category={category}
               date={date}
-              timeToRead={toString(timeToRead)}
+              timeToRead={timeToRead}
               title={title}
               description={description}
             />

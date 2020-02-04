@@ -20,4 +20,9 @@ export const LayoutMain = styled.main`
       'posts'
       'pagination';
   }
+
+  ${media.lessThan('large')`
+    width: 100%;
+    padding: 0 0 3rem; 
+  `}
 `
